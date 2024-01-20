@@ -25,5 +25,4 @@ if (media < 4):
 
 if (media > 10):
     print("Média Invalida")
-        
 
