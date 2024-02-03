@@ -28,4 +28,5 @@ print(filme_cadastrado.nome)
 print(filme_cadastrado.genero)
 print(filme_cadastrado.duracao ,"Minutos")
 print(filme_cadastrado.diretor)
-        
+
+
