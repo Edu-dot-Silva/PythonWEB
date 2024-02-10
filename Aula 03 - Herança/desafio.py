@@ -1,43 +1,22 @@
-# Calculadora
-
 class Calculadora:
+    def __init__(self,a,b) -> None:
+        self.a=a
+        self.b=a
 
-    
+        def somar(self):
+            return self.a + self.b
+        def subtrair(self):
+            return self.a - self.b
+        def multiplicar(self):
+            return self.a * self.b
+        def somar(self):
+            return self.a / self.b
 
-    
-    def soma (a,b):
-        print(a + b)    
-        
-    
-    def subtrai ():
-        pass
+primeiro_numero = input("digite o primeiro numero:")
+segundo_numero = input("digite o segundo numero:")
 
-    
-    def multiplica ():
-        pass
-
-    
-    def divide ():
-        pass
-
-print ("Calculadora")
-
-def escolhe_primeiro_numero():
-    primeiro_numero = int(input("Digite o primeiro numero:"))
-
-def escolhe_segundo_numero():
-    segundo_numero = int(input("Digite o segundo numero:"))
-
-
-escolha_operacao = (input("Qual operação deseja realizar (Ultilize o teclado numerico):"))
-
-
-if escolha_operacao == "+":
-
-    a = escolhe_primeiro_numero()
-    b = escolhe_segundo_numero()
-
-    escolhe_primeiro_numero()
-    escolhe_segundo_numero()
-
-    print(Calculadora.soma(a,b))
+calc = Calculadora(primeiro_numero,segundo_numero)
+print(calc.somar())
+print(calc.subtrair())
+print(calc.dividir())
+print(calc.multiplicar())
