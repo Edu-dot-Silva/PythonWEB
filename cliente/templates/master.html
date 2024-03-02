@@ -1,0 +1,36 @@
+<!-- esse é o arquivo master do html que vai se repetir em todas as paginas -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tito's Stock</title>
+    
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <!-- os imports devem estar no comeco da pagina -->
+
+</head>
+<body>
+<nav class="navbar navbar-dark" style="background-color: cadetblue;padding: 24px;">
+    <h1 style="color: white;">Tito's Stock</h1>
+    <p style="color: white;">Sistema de gerenciamento</p>
+
+    <a style="color: white;" href="{% url 'index' %}">Home</a>
+    <a style="color: white;" href="{% url 'cadastro' %}">Cadastre-se</a>
+    <a style="color: white;" href="{% url 'listar' %}">Lista de Clientes</a>
+    <a style="color: white;" href="{% url 'estoque' %}">Estoque</a>
+    <!-- definindo a rota que ia ao clicar nessas opçoes -->
+</nav>
+
+    {% block content %}
+
+    {% endblock %}
+    <!-- definindo a posição onde o conteudo do cadastro ficara nesse caso depois do menu -->
+
+    
+</body>
+</html>

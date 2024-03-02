@@ -17,5 +17,12 @@ urlpatterns = [
     path('',views.index,name='index'),
     # outro metodo
     
-    path('cadastro',views.cadastro,name='cadastro')
+    path('cadastro',views.cadastro,name='cadastro'),
+    # definido o apelido das rotas
+    
+    path('listar',views.listar,name='listar'),
+    # definindo a rota de listar
+    # url/def/apelido
+    
+    path('estoque',views.estoque,name='estoque')
 ]
