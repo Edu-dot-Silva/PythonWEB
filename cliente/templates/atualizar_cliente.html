@@ -1,0 +1,36 @@
+{% extends 'master_cliente.html' %}
+<!-- puxando todo conteudo da master para cadastro -->
+
+{% block content %}
+<h2>Editar cliente</h2>
+
+<form action="{% url 'atualizar_cliente' %}" method="post">
+    
+    {% csrf_token %}
+    <!-- esse comando cria um token que permite que o usuario se cadastre
+    esse token é uma forma de segurança que o django e outros frameworks precisam -->
+<input type="hidden" name="id" value="{{ dados_cliente.id }}">
+
+
+<div class="row">
+    <div class="col-md-3">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" class="form-control" value="{{ dados_cliente.primeiro_nome }}">
+    </div>
+    <div class="col-md-3">
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" class="form-control" value="{{ dados_cliente.sobrenome }}">
+    </div>
+    <div class="col-md-3">
+        <label for="email">Email</label>
+        <input type="text" name="email" class="form-control" value="{{ dados_cliente.email }}">
+    </div>
+</div>
+<div class="d-flex justify-content-end">
+    <button class="btn btn-sucsess">Atualizar</button>
+</div>
+
+</form>
+{% endblock %}
+<!-- definindo o bloco de conteudo que ira aparecer na pagina de cadastro 
+    junto ao conteudo que foi puxado da master -->

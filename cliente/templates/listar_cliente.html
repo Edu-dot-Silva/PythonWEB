@@ -1,4 +1,4 @@
-{% extends 'master.html' %}
+{% extends 'master_cliente.html' %}
 
 
 {% block content %}
@@ -24,7 +24,8 @@
                     <td>{{ cliente.status }}</td>
                     <td>{{ cliente.created_at }}</td>
                     <td>{{ cliente.updated_at }}</td>
-                    <td>{{ cliente.gerenciar }}</td>
+                    <td><a href="{% url 'deleta_cliente' cliente.id %}">Excluir</a></td>
+                    <td><a href="{% url 'editar_cliente' cliente.id %}">Editar</a></td>
                 </tr>
             {% endfor %}
             {% else %}

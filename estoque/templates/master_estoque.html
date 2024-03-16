@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tito's Stock</title>
+    
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+</head>
+<body>
+<nav class="navbar navbar-dark" style="background-color: cadetblue;padding: 24px;">
+    <h1 style="color: white;">Tito's Stock</h1>
+    <p style="color: white;">Sistema de gerenciamento</p>
+
+
+    <a style="color: white;" href="{% url 'index_estoque' %}">Home</a>
+    <a style="color: white;" href="{% url 'cadastro' %}">Cadastrar Produto</a>
+    <a style="color: white;" href="{% url 'lista' %}">Listagem de Produto</a>
+    
+</nav>
+
+    {% block content %}
+    {% endblock %}
+
+    
+</body>
+</html>
