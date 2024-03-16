@@ -7,10 +7,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     
+    path('',include('usuario.urls')),
     # path('',include('cliente.urls')),
     # declarando a url do cliente
     
     path('clientes/',include('cliente.urls')),
     
     path('estoque/',include('estoque.urls'))
+    
 ]
